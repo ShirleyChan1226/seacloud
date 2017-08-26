@@ -1,0 +1,6 @@
+(function(){	
+	//图片禁止拖拽
+	document.ondragstart = function(){
+	    return false;
+	};
+})();

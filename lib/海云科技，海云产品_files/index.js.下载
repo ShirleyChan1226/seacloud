@@ -1,0 +1,79 @@
+$(function(){
+	//滚屏
+	$('#hy_Section').fullpage({
+    	anchors: ['page1','page2','page3','page4','page5','page6','page7','page8'],
+		navigation: true,
+		menu: '#hy_Menu',
+		afterLoad:function(anchorLink,index) {
+			if(index == 2 || index == 3 || index == 4 || index == 5 || index == 6 || index == 7 || index == 8){
+				$('#hy_Menu').find("li").eq(1).addClass("active");
+			}
+		},
+		onLeave: function(index, nextIndex, direction) {
+	       	if(nextIndex == 3 && direction == 'down'){
+				$('.hy-fly').addClass('down3');
+	        } else {
+	        	$('.hy-fly').removeClass('down3');
+	        }
+	       	if(nextIndex == 3 && direction == 'up'){
+				$('.hy-fly').addClass('up3');
+	        } else {
+	        	$('.hy-fly').removeClass('up3');
+	        }
+	        if(nextIndex == 4 && direction == 'down'){
+				$('.hy-fly').addClass('down4');
+	        } else {
+	        	$('.hy-fly').removeClass('down4');
+	        }
+	       	if(nextIndex == 4 && direction == 'up'){
+				$('.hy-fly').addClass('up4');
+	        } else {
+	        	$('.hy-fly').removeClass('up4');
+	        }
+	        if(nextIndex == 5 && direction == 'down'){
+				$('.hy-fly').addClass('down5');
+	        } else {
+	        	$('.hy-fly').removeClass('down5');
+	        }
+	       	if(nextIndex == 5 && direction == 'up'){
+				$('.hy-fly').addClass('up5');
+	        } else {
+	        	$('.hy-fly').removeClass('up5');
+	        }
+	        if(nextIndex == 6 && direction == 'down'){
+				$('.hy-fly').addClass('down6');
+	        } else {
+	        	$('.hy-fly').removeClass('down6');
+	        }
+	       	if(nextIndex == 6 && direction == 'up'){
+				$('.hy-fly').addClass('up6');
+	        } else {
+	        	$('.hy-fly').removeClass('up6');
+	        }
+	        if(nextIndex == 7 && direction == 'down'){
+				$('.hy-fly').addClass('down7');
+	        } else {
+	        	$('.hy-fly').removeClass('down7');
+	        }
+	       	if(nextIndex == 7 && direction == 'up'){
+				$('.hy-fly').addClass('up7');
+	        } else {
+	        	$('.hy-fly').removeClass('up7');
+	        }
+	        if(nextIndex == 8 && direction == 'down'){
+				$('.hy-fly').addClass('down8');
+	        } else {
+	        	$('.hy-fly').removeClass('down8');
+	        }
+        }
+	});
+	
+	//首页悬浮
+	$('.home-list li').on({
+		mouseenter:function(){
+			$(this).removeClass('hideC').addClass('showC');
+		},mouseleave:function(){
+			$(this).removeClass('showC').addClass('hideC');
+		}
+	});
+});
